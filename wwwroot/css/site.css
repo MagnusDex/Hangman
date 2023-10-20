@@ -1,0 +1,17 @@
+﻿#letters td {
+    border: 1px solid black;
+    width: 1.5em;
+    text-align: center;
+    background-color: #feffa7;
+    cursor: pointer;
+}
+
+#letters td.used {
+    color: #808080;
+    background-color: #d4d4d4;
+    cursor: default;
+}
+
+#letters {
+    border-spacing: 5px;
+}

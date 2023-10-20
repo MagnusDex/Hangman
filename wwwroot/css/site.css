@@ -1,4 +1,9 @@
-﻿#letters td {
+﻿
+#letters {
+    border-spacing: 5px;
+}
+
+#letters td {
     border: 1px solid black;
     width: 1.5em;
     text-align: center;
@@ -12,6 +17,25 @@
     cursor: default;
 }
 
-#letters {
+#word {
     border-spacing: 5px;
+    margin-top: 1em;
+    margin-bottom: 2em;
+}
+
+#word td {
+    border: 1px solid black;
+    width: 1.5em;
+    text-align: center;
+    background-color: #fff;
+    cursor: default;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.center {
+    display: block;
 }

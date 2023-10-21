@@ -4,55 +4,65 @@
     <meta charset="UTF-8">
     <title>Hangman</title>
     <link rel="icon" href="data:,"> <!-- avoids error when browser tries to get favicon -->
+    <link rel="preload" as="image" href="img/gallow0.png" />
+    <link rel="preload" as="image" href="img/gallow1.png" />
+    <link rel="preload" as="image" href="img/gallow2.png" />
+    <link rel="preload" as="image" href="img/gallow3.png" />
+    <link rel="preload" as="image" href="img/gallow4.png" />
+    <link rel="preload" as="image" href="img/gallow5.png" />
+    <link rel="preload" as="image" href="img/gallow6.png" />
+    <link rel="preload" as="image" href="img/gallow7.png" />
+    <link rel="preload" as="image" href="img/gallow8.png" />
     <link rel="stylesheet" href="css/site.css" />
 </head>
 <body>
-    <h1>Hangman</h1>
-    <button id="playHangman">Play hangman</button>
-    <img class="center" src="img/gallow0.png" />
-    <table id="word" class="center">
-        <tr>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-            <td>_</td>
-        </tr>
-    </table>
-    <table id="letters" class="center">
-        <tr>
-            <td>A</td>
-            <td>B</td>
-            <td class="used">C</td>
-            <td>D</td>
-            <td>E</td>
-            <td>F</td>
-            <td>G</td>
-            <td>H</td>
-            <td>I</td>
-            <td>J</td>
-            <td>K</td>
-            <td>L</td>
-            <td>M</td>
-        </tr>
-        <tr>
-            <td>N</td>
-            <td>O</td>
-            <td>P</td>
-            <td>Q</td>
-            <td>R</td>
-            <td>S</td>
-            <td>T</td>
-            <td>U</td>
-            <td>V</td>
-            <td>W</td>
-            <td>X</td>
-            <td>Y</td>
-            <td>Z</td>
-        </tr>
-    </table>
+    <div id="gameArea">
+        <div id="game">
+            <h1>Hangman</h1>
+            <img id="gallow" src="img/gallow0.png" alt="" />
+            <table id="word" class="center">
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+            <table id="letters" class="center">
+                <tr>
+                    <td>A</td>
+                    <td>B</td>
+                    <td>C</td>
+                    <td>D</td>
+                    <td>E</td>
+                    <td>F</td>
+                    <td>G</td>
+                    <td>H</td>
+                    <td>I</td>
+                    <td>J</td>
+                    <td>K</td>
+                    <td>L</td>
+                    <td>M</td>
+                </tr>
+                <tr>
+                    <td>N</td>
+                    <td>O</td>
+                    <td>P</td>
+                    <td>Q</td>
+                    <td>R</td>
+                    <td>S</td>
+                    <td>T</td>
+                    <td>U</td>
+                    <td>V</td>
+                    <td>W</td>
+                    <td>X</td>
+                    <td>Y</td>
+                    <td>Z</td>
+                </tr>
+            </table>
+            <div id="buttons">
+                <button id="cancel">Cancel</button>
+                <button id="play">Play</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/site.js" asp-append-version="true"></script>
 </body>

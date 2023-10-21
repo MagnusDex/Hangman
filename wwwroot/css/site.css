@@ -1,4 +1,16 @@
 ﻿
+h1 {
+    margin-bottom: 2em;
+}
+
+#gameArea {
+    text-align: center;
+}
+
+#game {
+    display: inline-block;
+}
+
 #letters {
     border-spacing: 5px;
 }
@@ -17,6 +29,10 @@
     cursor: default;
 }
 
+#letters td.hit {
+    background-color: #acfea7;
+}
+
 #word {
     border-spacing: 5px;
     margin-top: 1em;
@@ -31,11 +47,27 @@
     cursor: default;
 }
 
+#word td.missing {
+    background-color: #ff8c8c;
+}
+
+#word td.hit {
+    background-color: #66ff5a;
+}
+
+#word td.noBorder {
+    border: 1px solid transparent;
+}
+
 .center {
     margin-left: auto;
     margin-right: auto;
 }
 
-img.center {
-    display: block;
+#buttons {
+    text-align: right;
+    margin-top: 2em;
+}
+#cancel, #play {
+    margin-left:1em;
 }

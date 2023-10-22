@@ -11,9 +11,9 @@ builder.Services.AddHttpClient("ExternalWordProvider", (client) =>
 
 var app = builder.Build();
 
+app.UseHttpsRedirection();
 app.UseDefaultFiles();
 app.UseStaticFiles();
-app.UseHttpsRedirection();
 
 app.MapGet("/random_word", async (IHttpClientFactory httpClientFactory) =>
 {

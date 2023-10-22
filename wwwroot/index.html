@@ -20,6 +20,7 @@
         <div id="game">
             <h1>Hangman</h1>
             <img id="gallow" src="img/gallow0.png" alt="" />
+            <p id="misses">&nbsp;<p>
             <table id="word" class="center">
                 <tr>
                     <td></td>
@@ -58,11 +59,47 @@
                 </tr>
             </table>
             <div id="buttons">
+                <button id="help">Show help</button>
                 <button id="cancel">Cancel</button>
                 <button id="play">Play</button>
             </div>
-        </div>
-    </div>
+            <dialog id="helpDlg">
+                <span id="helpClose">&#x2715</span>
+                <h3>How to play Hangman</h3>
+                <p>
+                    The computer thinks of a word.
+                </p>
+                <p style="font-style: italic; font-size:small;">
+                    <b>Note:</b> In this particular version the word is always an
+                    <b>adjective</b> (like blue, skillful, huge, etc.)
+                </p>
+                <p>
+                    Each letter of the word is marked by an underscore ( _ ).
+                </p>
+                <p>
+                    Your task is to guess the word, letter by letter.
+                </p>
+                <p>
+                    If you guess a letter that is in the word, it will be shown 
+                    everywhere it appears in the word
+                </p>
+                <img id="gallowShow" src="img/gallow-show.png">
+                <p>
+                    If the letter isn't in the word then a gallow with a hanging
+                    man will gradually be drawn, step by step for each 
+                    wrong letter.
+                </p>
+                <p>
+                    You will continue guessing letters until you either solve the
+                    word or the picture of the hanging man is completed.
+                </p>
+                <p>
+                    The picture is completed in 8 steps, so you can miss 7 times
+                    and still succeed. But if you miss 8 times, you lose.
+                </p>
+            </dialog>
+        </p>
+    </p>
 
     <script src="js/site.js" asp-append-version="true"></script>
 </body>

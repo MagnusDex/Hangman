@@ -18,6 +18,12 @@ app.UseHttpsRedirection();
 app.MapGet("/random_word", async (IHttpClientFactory httpClientFactory) =>
 {
     var client = httpClientFactory.CreateClient("ExternalWordProvider");
+
+    // Uncomment the following line to test how intermittent exceptions are handled
+    //   if ((new Random()).Next(0, 2) == 1) {throw new InvalidOperationException("Faked exception"); }
+    // Uncomment the following line to test how wrong URI is handled
+    //   client.BaseAddress = new Uri("https://api.api-ninjas.com/v20/randomword?type=adjective");
+
     return await client.GetFromJsonAsync<ExternalWordProviderStruct>("");
  })
  .WithName("GetRandomWord");

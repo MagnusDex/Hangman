@@ -1,4 +1,7 @@
-﻿
+﻿* {
+    font-family:sans-serif;
+}
+
 h1 {
     margin-bottom: 2em;
 }
@@ -9,6 +12,7 @@ h1 {
 
 #game {
     display: inline-block;
+    position: relative;
 }
 
 #letters {
@@ -17,7 +21,8 @@ h1 {
 
 #letters td {
     border: 1px solid black;
-    width: 1.5em;
+    width: 1.8em;
+    height: 1.8em;
     text-align: center;
     background-color: #feffa7;
     cursor: pointer;
@@ -41,7 +46,8 @@ h1 {
 
 #word td {
     border: 1px solid black;
-    width: 1.5em;
+    width: 1.8em;
+    height: 1.8em;
     text-align: center;
     background-color: #fff;
     cursor: default;
@@ -64,10 +70,51 @@ h1 {
     margin-right: auto;
 }
 
+#misses {
+    visibility: hidden;
+    font-size:small;
+}
+
 #buttons {
     text-align: right;
     margin-top: 2em;
 }
+
 #cancel, #play {
     margin-left:1em;
+}
+
+#help {
+    float: left;
+    width: 6.5em;
+}
+
+dialog::backdrop {
+    background: rgba(100, 100, 100, 0.25);
+}
+
+
+#helpDlg {
+    border: 2px solid #70ff64;
+    background-color: #e6ffe4;
+    width: 400px;
+    text-align: left;
+    padding: 1.5em;
+}
+
+#helpClose {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0.5em;
+    color: red;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#gallowShow {
+    float: right;
+    width: 110px;
+    height: auto;
+    padding-left: 10px;
 }

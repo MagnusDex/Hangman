@@ -7,8 +7,8 @@ difficult to guess.
 
 ### Platform
 
-This text is written from the Windows perspective, but is useful also
-for other operation systems.
+This text is written from the perspective of Visual Studio 2022 on Windows, 
+but is useful also for other systems.
 
 ### Secret API Key
 This application accesses an external API to get random words. 

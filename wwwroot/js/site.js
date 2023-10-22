@@ -116,22 +116,26 @@
         if (numberOfWrongLetters >= 8) {
             cancel();
         } else {
-            let msg;
-            switch (numberOfWrongLetters) {
-                case 6:
-                    msg = '(You can only miss 1 more time)';
-                    break;
-                case 7:
-                    msg = '(You cannot miss any more times)';
-                    break;
-                default:
-                    msg = '(You can miss ' + (7 - numberOfWrongLetters) + ' times more)';
-            }
-            if (7 - numberOfWrongLetters <= 3) {
-                misses.style.color = 'red';
-            }
-            misses.innerText = msg;
+            updateCounter(numberOfWrongLetters)
         }
+    }
+
+    function updateCounter(numberOfWrongLetters) {
+        let msg;
+        switch (numberOfWrongLetters) {
+            case 6:
+                msg = '(You can only miss 1 more time)';
+                break;
+            case 7:
+                msg = '(You cannot miss any more times)';
+                break;
+            default:
+                msg = '(You can miss ' + (7 - numberOfWrongLetters) + ' times more)';
+        }
+        if (7 - numberOfWrongLetters <= 3) {
+            misses.style.color = 'red';
+        }
+        misses.innerText = msg;
     }
 
     function tryUpdateWord(letter) {
@@ -161,7 +165,7 @@
             const json = await response.json();
             return json.word;
         }
-        throw ("error encountered");
+        throw "An error occurred.";
     }
 
 }());
